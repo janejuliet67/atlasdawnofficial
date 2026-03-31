@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atlas Dawn | Luxury Hot Air Balloon Experiences in Marrakech</title>
+  <meta
+    name="description"
+    content="Atlas Dawn is a premium hot air balloon experience brand in Marrakech, offering cinematic sunrise flights, private couple journeys, concierge transport, and unforgettable desert storytelling."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__mark">
+      <span>Atlas</span>
+      <span>Dawn</span>
+    </div>
+  </div>
+
+  <div class="ambient-sky" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top">
+        <span class="brand__kicker">Proposed Luxury Brand</span>
+        <span class="brand__name">Atlas Dawn</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <a href="#experience">Experience</a>
+        <a href="#packages">Packages</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#destinations">Marrakech</a>
+        <a href="#booking">Booking</a>
+        <a class="btn btn--nav" href="#booking">Book Now</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <video
+        class="hero__video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      >
+        <source src="https://www.pexels.com/download/video/34076898/" type="video/mp4">
+        <source src="https://www.pexels.com/download/video/29169391/" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="hero__grain"></div>
+      <div class="hero__balloon hero__balloon--one"></div>
+      <div class="hero__balloon hero__balloon--two"></div>
+
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow reveal">Luxury Sunrise Balloon Journeys | Marrakech</p>
+          <h1 id="hero-title" class="reveal">Float Above Marrakech. Experience the Extraordinary.</h1>
+          <p class="hero__lede reveal">
+            When the first light touches the desert and the Atlas peaks turn gold, Atlas Dawn lifts you into a quieter version of Morocco.
+            Private transfers, warm mint tea, a sunrise flight, and breakfast in the open air make the morning feel less like a tour and more like a memory already becoming iconic.
+          </p>
+          <div class="hero__actions reveal">
+            <a class="btn btn--primary" href="#booking">Book Your Flight</a>
+            <button
+              class="btn btn--ghost"
+              type="button"
+              data-modal-type="video"
+              data-modal-src="https://www.pexels.com/download/video/34076898/"
+              data-modal-poster="https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              data-modal-title="Your Experience in 60 Seconds"
+              data-modal-copy="A short, cinematic preview of takeoff, desert light, and the silence that makes sunrise ballooning in Morocco unforgettable."
+            >
+              Watch Experience
+            </button>
+          </div>
+          <div class="hero__trust reveal" aria-label="Trust badges">
+            <div class="trust-pill">
+              <strong>4.9/5</strong>
+              <span>Tripadvisor rating</span>
+            </div>
+            <div class="trust-pill">
+              <strong>1,240+</strong>
+              <span>Sunrise guests hosted</span>
+            </div>
+            <div class="trust-pill">
+              <strong>Private</strong>
+              <span>Proposal and VIP baskets</span>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero__aside reveal">
+          <div class="hero-card hero-card--countdown">
+            <p class="hero-card__eyebrow">Next Dawn Window</p>
+            <strong>Sunrise check-in closes in</strong>
+            <div class="countdown" aria-live="polite">
+              <span><b id="countdown-hours">00</b><small>Hours</small></span>
+              <span><b id="countdown-minutes">00</b><small>Minutes</small></span>
+              <span><b id="countdown-seconds">00</b><small>Seconds</small></span>
+            </div>
+            <p class="hero-card__note">Spring and autumn departures are usually the first dates to disappear.</p>
+          </div>
+
+          <div class="hero-card hero-card--story">
+            <p class="hero-card__eyebrow">Designed for feeling</p>
+            <ul class="hero-points">
+              <li>Luxury 4x4 pickup from your riad or hotel</li>
+              <li>Calm, small-group departures before the city wakes</li>
+              <li>Private couple and creator-focused packages</li>
+              <li>Concierge support on WhatsApp from first message</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero__rail container reveal">
+        <article class="hero-rail__item">
+          <span>Pickup</span>
+          <strong>Luxury 4x4 transfer</strong>
+        </article>
+        <article class="hero-rail__item">
+          <span>Flight</span>
+          <strong>Sunrise over desert and Atlas views</strong>
+        </article>
+        <article class="hero-rail__item">
+          <span>Breakfast</span>
+          <strong>Traditional Moroccan morning table</strong>
+        </article>
+        <article class="hero-rail__item">
+          <span>Moments</span>
+          <strong>Proposal, content, and VIP-ready upgrades</strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section intro">
+      <div class="container intro__grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Brand Story</p>
+          <h2>Not a tour agency. A luxury sunrise house built around wonder, stillness, and service.</h2>
+        </div>
+        <div class="quote-panel reveal">
+          <p>
+            The moment the burners quiet down, everything changes. You notice the hush, the light, the shape of the land,
+            and the feeling that you have stepped outside ordinary travel for an hour.
+          </p>
+          <span>Crafted for couples, luxury travelers, and storytellers.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section experience" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">The Experience</p>
+          <h2>Every touchpoint is choreographed to feel effortless and cinematic.</h2>
+          <p>
+            We replaced generic excursion energy with a slower, more elegant rhythm. The journey begins in darkness and ends with sunlight,
+            conversation, and a breakfast you will remember as clearly as the flight.
+          </p>
+        </div>
+
+        <div class="experience-grid">
+          <article class="journey-card reveal">
+            <div class="journey-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M12 27c0-8 5.4-14 12-14s12 6 12 14v5H12Z"/><path d="M18 32h12l-2 7h-8Z"/><path d="M24 13V7"/></svg>
+            </div>
+            <span class="journey-card__step">01</span>
+            <h3>Luxury pickup</h3>
+            <p>Your morning starts with a quiet, climate-controlled 4x4 transfer from your riad, hotel, or airport-side property.</p>
+          </article>
+
+          <article class="journey-card reveal">
+            <div class="journey-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M13 28h22"/><path d="M17 21h14"/><path d="M22 15h4"/><path d="M15 34c0 4 3.6 7 9 7s9-3 9-7V11H15Z"/></svg>
+            </div>
+            <span class="journey-card__step">02</span>
+            <h3>Welcome tea</h3>
+            <p>Fresh mint tea, soft light, and a gentle pre-flight briefing set the tone before the balloon rises.</p>
+          </article>
+
+          <article class="journey-card reveal">
+            <div class="journey-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M24 6c7 0 13 6.6 13 14.7 0 8.8-6.8 15.9-13 21.3-6.2-5.4-13-12.5-13-21.3C11 12.6 17 6 24 6Z"/><path d="M21 21a3 3 0 1 0 6 0 3 3 0 0 0-6 0Z"/></svg>
+            </div>
+            <span class="journey-card__step">03</span>
+            <h3>Flight at sunrise</h3>
+            <p>Lift above Marrakech as the desert glows amber and the Atlas Mountains sharpen into view beneath the morning sky.</p>
+          </article>
+
+          <article class="journey-card reveal">
+            <div class="journey-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 48 48"><path d="M12 24h24"/><path d="M18 16h12"/><path d="M15 31h18"/><path d="M11 12h26v24H11Z"/></svg>
+            </div>
+            <span class="journey-card__step">04</span>
+            <h3>Breakfast in the open air</h3>
+            <p>Land softly, toast the flight, and settle into a traditional Moroccan breakfast with time to savor the afterglow.</p>
+          </article>
+        </div>
+
+        <div class="film-card reveal">
+          <div
+            class="film-card__media"
+            style="--card-image: url('https://images.pexels.com/photos/30710160/pexels-photo-30710160.jpeg?auto=compress&cs=tinysrgb&w=1200');"
+          ></div>
+          <div class="film-card__body">
+            <p class="eyebrow">Your Experience in 60 Seconds</p>
+            <h3>See the shift from desert blue to gold before you ever step into the basket.</h3>
+            <p>
+              Ideal for couples planning a proposal, creators planning content, or travelers who want to feel the pace before they reserve.
+            </p>
+            <button
+              class="btn btn--secondary"
+              type="button"
+              data-modal-type="video"
+              data-modal-src="https://www.pexels.com/download/video/19002200/"
+              data-modal-poster="https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              data-modal-title="A Sunrise Flight in Motion"
+              data-modal-copy="A quick preview of the launch, the silence above the desert, and the soft landing into breakfast."
+            >
+              Play the short film
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section packages" id="packages">
+      <div class="container">
+        <div class="section-heading section-heading--split reveal">
+          <div>
+            <p class="eyebrow">Packages</p>
+            <h2>Curated offers for romance, luxury travel, and camera-ready storytelling.</h2>
+          </div>
+          <div class="section-heading__aside">
+            <button class="toggle-chip" id="compare-toggle" type="button" aria-expanded="false">
+              Compare packages
+            </button>
+            <p>Pricing updates instantly in the booking section and sticky bar.</p>
+          </div>
+        </div>
+
+        <div class="packages-grid">
+          <article class="package-card reveal is-selected" data-package-card="classic">
+            <p class="package-card__tag">Classic Flight</p>
+            <h3>Shared sunrise basket</h3>
+            <p class="package-card__price">From 950 MAD <span>per guest</span></p>
+            <ul class="package-card__list">
+              <li>Shared sunrise flight</li>
+              <li>Hotel or riad pickup</li>
+              <li>Mint tea and breakfast</li>
+              <li>Ideal for first-time visitors</li>
+            </ul>
+            <a class="btn btn--ghost" href="#booking" data-select-package="classic">Reserve Now</a>
+          </article>
+
+          <article class="package-card package-card--featured reveal" data-package-card="couple">
+            <span class="package-card__badge">Most Popular</span>
+            <p class="package-card__tag">Private Couple Flight</p>
+            <h3>Just the two of you above Marrakech.</h3>
+            <p class="package-card__price">2,690 MAD <span>for two guests</span></p>
+            <ul class="package-card__list">
+              <li>Private basket for two</li>
+              <li>Proposal-friendly pacing</li>
+              <li>Premium breakfast styling</li>
+              <li>Priority photo moments</li>
+            </ul>
+            <a class="btn btn--primary" href="#booking" data-select-package="couple">Reserve Now</a>
+          </article>
+
+          <article class="package-card reveal" data-package-card="vip">
+            <p class="package-card__tag">VIP / Royal Experience</p>
+            <h3>A fully elevated sunrise itinerary.</h3>
+            <p class="package-card__price">From 1,450 MAD <span>per guest</span></p>
+            <ul class="package-card__list">
+              <li>Private ground transfer</li>
+              <li>Priority basket placement</li>
+              <li>Signature breakfast table</li>
+              <li>Dedicated concierge support</li>
+            </ul>
+            <a class="btn btn--ghost" href="#booking" data-select-package="vip">Reserve Now</a>
+          </article>
+
+          <article class="package-card reveal" data-package-card="creator">
+            <p class="package-card__tag">Influencer / Content Package</p>
+            <h3>Designed for reels, campaigns, and unforgettable frames.</h3>
+            <p class="package-card__price">From 1,650 MAD <span>per guest</span></p>
+            <ul class="package-card__list">
+              <li>Creator concierge timeline</li>
+              <li>Drone photo upsell ready</li>
+              <li>Shot planning support</li>
+              <li>Best for couples and brands</li>
+            </ul>
+            <a class="btn btn--ghost" href="#booking" data-select-package="creator">Reserve Now</a>
+          </article>
+        </div>
+
+        <div class="compare-panel reveal" id="compare-panel" hidden>
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Package</th>
+                <th>Guests</th>
+                <th>Flight Style</th>
+                <th>Best For</th>
+                <th>Starting Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Classic Flight</td>
+                <td>1-6</td>
+                <td>Shared basket</td>
+                <td>Luxury sightseeing</td>
+                <td>950 MAD / guest</td>
+              </tr>
+              <tr>
+                <td>Private Couple Flight</td>
+                <td>2 only</td>
+                <td>Private basket</td>
+                <td>Romance and proposals</td>
+                <td>2,690 MAD</td>
+              </tr>
+              <tr>
+                <td>VIP / Royal Experience</td>
+                <td>1-6</td>
+                <td>Priority premium</td>
+                <td>Luxury travelers</td>
+                <td>1,450 MAD / guest</td>
+              </tr>
+              <tr>
+                <td>Influencer / Content Package</td>
+                <td>1-6</td>
+                <td>Creator-led pacing</td>
+                <td>Content and campaigns</td>
+                <td>1,650 MAD / guest</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Immersive Gallery</p>
+          <h2>Shot like a luxury travel editorial, built to convert like a best-in-class landing page.</h2>
+          <p>Tap any frame to open a larger preview. Mix of cinematic clips, stills, and social-first moments.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <button
+            class="gallery-card gallery-card--wide reveal"
+            type="button"
+            style="--card-image: url('https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=1600');"
+            data-modal-type="video"
+            data-modal-src="https://www.pexels.com/download/video/34076898/"
+            data-modal-poster="https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            data-modal-title="Sunrise Takeoff"
+            data-modal-copy="A golden, wide-angle opening that captures the scale, silence, and emotional pull of the flight."
+          >
+            <span class="gallery-card__type">Video</span>
+            <strong>Sunrise takeoff</strong>
+            <p>View full experience</p>
+          </button>
+
+          <button
+            class="gallery-card gallery-card--tall reveal"
+            type="button"
+            style="--card-image: url('https://images.pexels.com/photos/30710160/pexels-photo-30710160.jpeg?auto=compress&cs=tinysrgb&w=1200');"
+            data-modal-type="image"
+            data-modal-src="https://images.pexels.com/photos/30710160/pexels-photo-30710160.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            data-modal-title="Desert Light Before Departure"
+            data-modal-copy="The early-hour stillness that makes Marrakech balloon mornings feel intimate and exclusive."
+          >
+            <span class="gallery-card__type">Still</span>
+            <strong>Before the burners ignite</strong>
+            <p>Dune light and silence</p>
+          </button>
+
+          <button
+            class="gallery-card reveal"
+            type="button"
+            style="--card-image: url('https://images.pexels.com/photos/26893204/pexels-photo-26893204.jpeg?auto=compress&cs=tinysrgb&w=1200');"
+            data-modal-type="image"
+            data-modal-src="https://images.pexels.com/photos/26893204/pexels-photo-26893204.jpeg?auto=compress&cs=tinysrgb&w=1400"
+            data-modal-title="Influencer Desert Styling"
+            data-modal-copy="Perfect for creator packages, fashion-forward campaigns, and post-flight editorial moments."
+          >
+            <span class="gallery-card__type">Editorial</span>
+            <strong>Creator-ready desert frames</strong>
+            <p>Built for content that feels expensive</p>
+          </button>
+
+          <button
+            class="gallery-card reveal"
+            type="button"
+            style="--card-image: url('https://images.pexels.com/photos/1731660/pexels-photo-1731660.jpeg?auto=compress&cs=tinysrgb&w=1200');"
+            data-modal-type="image"
+            data-modal-src="https://images.pexels.com/photos/1731660/pexels-photo-1731660.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            data-modal-title="Sahara Texture"
+            data-modal-copy="The earth tones, ripples, and warmth that define the visual identity of the journey."
+          >
+            <span class="gallery-card__type">Texture</span>
+            <strong>The color of the morning</strong>
+            <p>Sand, shadow, and warmth</p>
+          </button>
+
+          <button
+            class="gallery-card gallery-card--wide reveal"
+            type="button"
+            style="--card-image: url('https://images.pexels.com/photos/4548520/pexels-photo-4548520.jpeg?auto=compress&cs=tinysrgb&w=1600');"
+            data-modal-type="image"
+            data-modal-src="https://images.pexels.com/photos/4548520/pexels-photo-4548520.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            data-modal-title="Balloons in Flight"
+            data-modal-copy="A high-altitude look at the layered landscape and the visual drama of a sky filled with color."
+          >
+            <span class="gallery-card__type">Panorama</span>
+            <strong>Float above the landscape</strong>
+            <p>Skyline, shadow, horizon</p>
+          </button>
+        </div>
+
+        <div class="gallery-feed reveal" aria-label="Instagram style highlights">
+          <span>@atlasdawnmoments</span>
+          <span>Proposal edits</span>
+          <span>Golden hour reels</span>
+          <span>Private breakfast setups</span>
+          <span>Atlas mountain skies</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section proof">
+      <div class="container proof__grid">
+        <div class="proof__intro reveal">
+          <p class="eyebrow">Social Proof</p>
+          <h2>People remember the silence, the light, and how cared for they felt.</h2>
+          <p>
+            Social proof here is not an afterthought. It is built as a conversion engine: stronger statistics, emotional testimonials,
+            and video-first content that feels native to luxury travel and social media.
+          </p>
+
+          <div class="counter-grid">
+            <article class="counter-card">
+              <strong class="counter" data-counter="1240" data-suffix="+">0</strong>
+              <span>Sunrise guests hosted</span>
+            </article>
+            <article class="counter-card">
+              <strong class="counter" data-counter="97" data-suffix="%">0</strong>
+              <span>Said it was the highlight of their trip</span>
+            </article>
+            <article class="counter-card">
+              <strong class="counter" data-counter="18">0</strong>
+              <span>Countries represented this season</span>
+            </article>
+          </div>
+        </div>
+
+        <div class="testimonial-stack">
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__top">
+              <span class="testimonial-card__badge">Video testimonial</span>
+              <button
+                class="text-link"
+                type="button"
+                data-modal-type="video"
+                data-modal-src="https://www.pexels.com/download/video/29169391/"
+                data-modal-poster="https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=1600"
+                data-modal-title="Laura and Amir"
+                data-modal-copy="A short review focused on the proposal pacing, the feeling of privacy, and why the breakfast mattered more than expected."
+              >
+                Watch 36s
+              </button>
+            </div>
+            <blockquote>
+              "The service felt like a luxury hotel and the flight felt like cinema. We did the private couple package and it became the memory people ask us about first."
+            </blockquote>
+            <p>Laura and Amir, Dubai</p>
+          </article>
+
+          <article class="testimonial-card reveal">
+            <div class="testimonial-card__top">
+              <span class="testimonial-card__badge">Creator feedback</span>
+              <button
+                class="text-link"
+                type="button"
+                data-modal-type="image"
+                data-modal-src="https://images.pexels.com/photos/26893204/pexels-photo-26893204.jpeg?auto=compress&cs=tinysrgb&w=1400"
+                data-modal-title="Creator Package Preview"
+                data-modal-copy="An example of the creator-first styling and desert visuals that make the content package feel different from a standard ride."
+              >
+                Open lookbook
+              </button>
+            </div>
+            <blockquote>
+              "Usually travel activities fight your content schedule. This one was designed around it. Every transition had room to shoot without losing the magic."
+            </blockquote>
+            <p>Nora, Paris</p>
+          </article>
+
+          <div class="photo-strip reveal" aria-label="Real guest photo highlights">
+            <span class="photo-strip__chip">Real guest moments</span>
+            <div class="photo-strip__images">
+              <div style="--photo-image: url('https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=900');"></div>
+              <div style="--photo-image: url('https://images.pexels.com/photos/30710160/pexels-photo-30710160.jpeg?auto=compress&cs=tinysrgb&w=900');"></div>
+              <div style="--photo-image: url('https://images.pexels.com/photos/26893204/pexels-photo-26893204.jpeg?auto=compress&cs=tinysrgb&w=900');"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section destinations" id="destinations">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Where We Fly</p>
+          <h2>Your flight stays close to Marrakech, with the best balance of silence, desert texture, and Atlas views.</h2>
+          <p>We keep the experience focused on the launch zone we know best, so the story stays clear and the promise stays honest.</p>
+        </div>
+
+        <div class="destination-shell">
+          <div class="map-panel reveal">
+            <div class="map-visual" aria-label="Morocco destination map">
+              <button class="map-pin is-active" type="button" data-destination="marrakech" style="--pin-x: 52%; --pin-y: 46%;">Marrakech</button>
+            </div>
+          </div>
+
+          <div class="destination-copy reveal" aria-live="polite">
+            <p class="eyebrow">Launch Zone</p>
+            <h3 id="destination-title">Marrakech Dawn Escape</h3>
+            <p id="destination-description">
+              Fastest transfer from the city, best for first-time visitors, and the most balanced mix of desert atmosphere with Atlas Mountain views.
+            </p>
+            <div class="destination-meta">
+              <span id="destination-drive">30 to 45 minutes from central Marrakech</span>
+              <span id="destination-mood">Mood: cinematic, romantic, effortless</span>
+            </div>
+            <ul class="destination-highlights" id="destination-highlights">
+              <li>Best for luxury couples and premium first-time travelers</li>
+              <li>Ideal balance of convenience and scenery</li>
+              <li>Private transfers available from riads and villas</li>
+            </ul>
+            <a class="btn btn--secondary" id="destination-cta" href="#booking">Plan this itinerary</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section standards">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Why Choose Us</p>
+          <h2>Luxury is the result of disciplined details, not louder promises.</h2>
+        </div>
+
+        <div class="standards-grid">
+          <article class="standard-card reveal">
+            <span class="standard-card__label">Safety First</span>
+            <h3>Certified pilots and weather-first decisions</h3>
+            <p>Every departure is led by licensed pilots and guided by conservative weather calls, not pressure to launch.</p>
+          </article>
+
+          <article class="standard-card reveal">
+            <span class="standard-card__label">Luxury Service</span>
+            <h3>VIP transport and calm ground hospitality</h3>
+            <p>From the vehicle to the breakfast table, the service language feels private, soft, and polished.</p>
+          </article>
+
+          <article class="standard-card reveal">
+            <span class="standard-card__label">Unique Experience</span>
+            <h3>Sunrise flights with emotional pacing</h3>
+            <p>We lead with feeling: silence, space, and a sense of scale that stays with guests long after landing.</p>
+          </article>
+
+          <article class="standard-card reveal">
+            <span class="standard-card__label">Local Authenticity</span>
+            <h3>Moroccan warmth without the generic excursion script</h3>
+            <p>Tea, breakfast, and hosting are rooted in place, while the design and service feel unmistakably premium.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section extras" id="extras">
+      <div class="container extras__grid">
+        <div class="section-copy reveal">
+          <p class="eyebrow">Bonus Revenue Features</p>
+          <h2>High-value add-ons that turn a booking page into a luxury travel business.</h2>
+          <p>
+            Giftable products, premium upgrades, and corporate-ready offers create stronger average order value without making the site feel crowded.
+          </p>
+        </div>
+
+        <div class="extras-list">
+          <article class="extra-card reveal">
+            <h3>Gift Cards</h3>
+            <p>Elegant digital gift experiences for honeymoons, anniversaries, and milestone surprises.</p>
+          </article>
+          <article class="extra-card reveal">
+            <h3>Drone Photo Package</h3>
+            <p>An easy upsell for proposals, creators, and travelers who want content that feels premium from the first frame.</p>
+          </article>
+          <article class="extra-card reveal">
+            <h3>Corporate Sunrise Charter</h3>
+            <p>A team-building angle with private fleets, branded breakfasts, and concierge-led group logistics.</p>
+          </article>
+          <article class="extra-card reveal">
+            <h3>Airport Pickup Add-On</h3>
+            <p>Perfect for luxury travelers arriving late and wanting a seamless dawn experience the next morning.</p>
+          </article>
+          <article class="extra-card reveal">
+            <h3>Surprise Proposal Styling</h3>
+            <p>Private setup, floral touches, pacing support, and post-flight reveal moments crafted with discretion.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section booking" id="booking">
+      <div class="container booking__layout">
+        <div class="booking-copy reveal">
+          <p class="eyebrow">Smart Booking UX</p>
+          <h2>Reserve the flight that matches the moment.</h2>
+          <p>
+            Choose your package, set the date, add premium touches, and let the concierge confirm the details.
+            The interface is built to feel simple, reassuring, and decisively premium.
+          </p>
+
+          <div class="tips-grid">
+            <article class="tip-card">
+              <span>Weather-based suggestion</span>
+              <p id="weather-tip">Spring mornings are ideal for soft temperatures, calm air, and the strongest golden-hour color.</p>
+            </article>
+            <article class="tip-card">
+              <span>Best time to fly</span>
+              <p id="timing-tip">Sunrise departures from September to May usually deliver the clearest visibility and the most dramatic light.</p>
+            </article>
+            <article class="tip-card">
+              <span>Booking note</span>
+              <p id="guest-lock-note">Need more than 6 guests? Our concierge can arrange a private fleet and branded morning setup.</p>
+            </article>
+          </div>
+        </div>
+
+        <form class="booking-form reveal" id="booking-form">
+          <div class="booking-form__grid">
+            <label>
+              Flight date
+              <input type="date" name="date" data-sync="date" required>
+            </label>
+            <label>
+              Package
+              <select name="package" data-sync="package" required>
+                <option value="classic">Classic Flight</option>
+                <option value="couple">Private Couple Flight</option>
+                <option value="vip">VIP / Royal Experience</option>
+                <option value="creator">Influencer / Content Package</option>
+              </select>
+            </label>
+            <label>
+              Guests
+              <select name="guests" data-sync="guests" required>
+                <option value="1">1 guest</option>
+                <option value="2" selected>2 guests</option>
+                <option value="3">3 guests</option>
+                <option value="4">4 guests</option>
+                <option value="5">5 guests</option>
+                <option value="6">6 guests</option>
+              </select>
+            </label>
+            <label>
+              Pickup
+              <select name="pickup" required>
+                <option value="riad">Riad or hotel in Marrakech</option>
+                <option value="villa">Private villa transfer</option>
+                <option value="airport">Airport-area hotel</option>
+              </select>
+            </label>
+          </div>
+
+          <fieldset class="booking-form__extras">
+            <legend>Enhance the morning</legend>
+            <label class="check-row">
+              <input type="checkbox" name="extras" value="drone">
+              <span>Drone photo package</span>
+              <strong>+ 450 MAD</strong>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="extras" value="airport">
+              <span>Airport pickup add-on</span>
+              <strong>+ 200 MAD</strong>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="extras" value="breakfast">
+              <span>Private breakfast styling</span>
+              <strong>+ 300 MAD</strong>
+            </label>
+            <label class="check-row">
+              <input type="checkbox" name="extras" value="proposal">
+              <span>Surprise proposal setup</span>
+              <strong>+ 950 MAD</strong>
+            </label>
+          </fieldset>
+
+          <div class="booking-form__summary">
+            <div>
+              <p>Total estimated price</p>
+              <strong class="price-lockup" id="booking-total">
+                <span class="price-lockup__amount" id="booking-total-amount">1 900</span>
+                <span class="price-lockup__currency">MAD</span>
+              </strong>
+              <span id="booking-note">Classic Flight for 2 guests</span>
+            </div>
+            <div class="booking-form__actions">
+              <button class="btn btn--primary" type="submit">Reserve Now</button>
+              <a
+                class="btn btn--ghost"
+                id="whatsapp-link"
+                href="https://wa.me/212617601803"
+                target="_blank"
+                rel="noreferrer"
+              >
+                WhatsApp Quick Booking
+              </a>
+            </div>
+          </div>
+
+          <p class="booking-form__note" id="booking-feedback"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="brand brand--footer" href="#top">
+          <span class="brand__kicker">Luxury Balloon House</span>
+          <span class="brand__name">Atlas Dawn</span>
+        </a>
+        <p>Luxury hot air balloon journeys designed in Marrakech for travelers who want emotion, beauty, and impeccable pacing.</p>
+      </div>
+
+      <div>
+        <p class="footer-title">Contact</p>
+        <p><a href="tel:+212617601803">+212 617601803</a></p>
+        <p><a href="mailto:hello@atlasdawn.ma">hello@atlasdawn.ma</a></p>
+        <p>Marrakech, Morocco</p>
+      </div>
+
+      <div>
+        <p class="footer-title">Explore</p>
+        <p><a href="#packages">Packages</a></p>
+        <p><a href="#destinations">Marrakech</a></p>
+        <p><a href="#booking">Gift cards and booking</a></p>
+      </div>
+
+      <form class="newsletter-form" id="newsletter-form">
+        <label>
+          Join the Dawn List
+          <input type="email" name="email" placeholder="Your email address" required>
+        </label>
+        <button class="btn btn--secondary" type="submit">Stay Inspired</button>
+        <p class="newsletter-form__feedback" id="newsletter-feedback">Monthly inspiration, booking drops, and best-time-to-fly tips.</p>
+      </form>
+    </div>
+
+    <div class="container footer-bottom">
+      <span>Built to feel like a luxury brand, not a generic tour listing.</span>
+      <div class="socials" aria-label="Social media links">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3Zm5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5Zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5Zm5.25-3.75a1.25 1.25 0 1 1-1.25 1.25 1.25 1.25 0 0 1 1.25-1.25Z"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.7 2A5.3 5.3 0 0 0 19 5.4a5.9 5.9 0 0 0 3 1v3.1a9.4 9.4 0 0 1-3.8-.8v6.3c0 3.9-3 6.7-6.9 6.7a6.9 6.9 0 1 1 0-13.8c.3 0 .7 0 1 .1v3.3a3.4 3.4 0 1 0 2.4 3.2V2Z"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.2a2.9 2.9 0 0 0-2-2C17.8 4.7 12 4.7 12 4.7s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2A30.4 30.4 0 0 0 2 12a30.4 30.4 0 0 0 .4 4.8 2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2A30.4 30.4 0 0 0 22 12a30.4 30.4 0 0 0-.4-4.8ZM10 15.5v-7l6 3.5Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="sticky-booking" id="sticky-booking" aria-label="Quick booking bar">
+    <div class="sticky-booking__inner">
+      <div class="sticky-booking__summary">
+        <span>Ready for sunrise?</span>
+        <strong id="sticky-summary">Classic Flight | 1 900 MAD</strong>
+        <small id="sticky-meta">2 guests</small>
+      </div>
+      <label>
+        <span>Date</span>
+        <input type="date" data-sync="date" aria-label="Sticky booking date">
+      </label>
+      <label>
+        <span>Package</span>
+        <select data-sync="package" aria-label="Sticky booking package">
+          <option value="classic">Classic</option>
+          <option value="couple">Couple</option>
+          <option value="vip">VIP</option>
+          <option value="creator">Creator</option>
+        </select>
+      </label>
+      <label>
+        <span>Guests</span>
+        <select data-sync="guests" aria-label="Sticky booking guests">
+          <option value="1">1</option>
+          <option value="2" selected>2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+        </select>
+      </label>
+      <a class="btn btn--primary" href="#booking">Check Availability</a>
+    </div>
+  </div>
+
+  <div class="media-modal" id="media-modal" hidden>
+    <button class="media-modal__backdrop" type="button" aria-label="Close preview" data-close-modal></button>
+    <div class="media-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="media-modal-title">
+      <button class="media-modal__close" type="button" aria-label="Close preview" data-close-modal>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="media-modal__media" id="media-modal-body"></div>
+      <div class="media-modal__copy">
+        <p class="eyebrow">Atlas Dawn Preview</p>
+        <h2 id="media-modal-title">Experience Preview</h2>
+        <p id="media-modal-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
