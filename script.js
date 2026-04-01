@@ -34,9 +34,9 @@ const stickyMeta = document.querySelector("#sticky-meta");
 const weatherTip = document.querySelector("#weather-tip");
 const timingTip = document.querySelector("#timing-tip");
 const guestLockNote = document.querySelector("#guest-lock-note");
-const whatsappLink = document.querySelector("#whatsapp-link");
 const bookingFeedback = document.querySelector("#booking-feedback");
 const newsletterFeedback = document.querySelector("#newsletter-feedback");
+const bookingWhatsappNumber = "212671517781";
 
 const destinationTitle = document.querySelector("#destination-title");
 const destinationDescription = document.querySelector("#destination-description");
@@ -456,16 +456,47 @@ packageLinks.forEach((link) => {
   });
 });
 
-const updateWhatsappLink = (total) => {
+const buildWhatsappUrl = (total) => {
   const selectedPackage = getSelectedPackage();
   const guests = getSelectedGuests();
   const selectedDate = getSelectedDate() || "flexible date";
   const packageName = packageData[selectedPackage].name;
-  const message =
-    `Hello Atlas Dawn, I would like to reserve the ${packageName} for ${formatGuestLabel(guests)} on ${selectedDate}. ` +
-    `Estimated website total: ${formatCurrency(total)}. Please confirm availability and pickup details.`;
+  const fullName = bookingForm?.querySelector('input[name="fullName"]')?.value?.trim() || "";
+  const phone = bookingForm?.querySelector('input[name="phone"]')?.value?.trim() || "";
+  const pickupLabel =
+    bookingForm?.querySelector('select[name="pickup"] option:checked')?.textContent?.trim() ||
+    "Riad or hotel in Marrakech";
+  const extras = bookingForm
+    ? [...bookingForm.querySelectorAll('input[name="extras"]:checked')].map((input) => {
+        return input.closest("label")?.querySelector("span")?.textContent?.trim() || input.value;
+      })
+    : [];
+  const lines = [
+    "Hello Atlas Dawn,",
+    "",
+    "I would like to request a booking with the following details:",
+  ];
 
-  whatsappLink.href = `https://wa.me/212617601803?text=${encodeURIComponent(message)}`;
+  if (fullName) {
+    lines.push(`Name: ${fullName}`);
+  }
+
+  if (phone) {
+    lines.push(`My WhatsApp: ${phone}`);
+  }
+
+  lines.push(
+    `Package: ${packageName}`,
+    `Guests: ${formatGuestLabel(guests)}`,
+    `Preferred date: ${selectedDate}`,
+    `Pickup: ${pickupLabel}`,
+    `Extras: ${extras.length ? extras.join(", ") : "None"}`,
+    `Estimated total: ${formatCurrency(total)}`,
+    "",
+    "Please confirm availability and the next steps."
+  );
+
+  return `https://wa.me/${bookingWhatsappNumber}?text=${encodeURIComponent(lines.join("\n"))}`;
 };
 
 function updateBookingSummary() {
@@ -493,7 +524,6 @@ function updateBookingSummary() {
 
   updatePackageCardState();
   updateWeatherTips();
-  updateWhatsappLink(grandTotal);
 }
 
 const setDefaultDates = () => {
@@ -519,6 +549,10 @@ syncInputs.forEach((input) => {
 });
 
 if (bookingForm) {
+  bookingForm.querySelectorAll('input[name="fullName"], input[name="phone"]').forEach((input) => {
+    input.addEventListener("input", updateBookingSummary);
+  });
+
   bookingForm.querySelectorAll('input[name="extras"]').forEach((input) => {
     input.addEventListener("change", updateBookingSummary);
   });
@@ -527,10 +561,20 @@ if (bookingForm) {
     event.preventDefault();
     const submitButton = bookingForm.querySelector('button[type="submit"]');
     const originalText = submitButton.textContent;
+    const selectedPackage = getSelectedPackage();
+    const guests = getSelectedGuests();
+    const chosenPackage = packageData[selectedPackage];
+    const baseTotal = chosenPackage.pricing === "fixed" ? chosenPackage.price : chosenPackage.price * guests;
+    const grandTotal = baseTotal + getExtrasTotal();
+    const whatsappUrl = buildWhatsappUrl(grandTotal);
 
     submitButton.disabled = true;
-    submitButton.textContent = "Request Sent";
-    bookingFeedback.textContent = "";
+    submitButton.textContent = "Opening WhatsApp...";
+    const openedWindow = window.open(whatsappUrl, "_blank", "noopener");
+
+    if (!openedWindow) {
+      window.location.href = whatsappUrl;
+    }
 
     window.setTimeout(() => {
       submitButton.disabled = false;
