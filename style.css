@@ -330,7 +330,7 @@ p {
   padding: calc(var(--header-height) + 2.5rem) 0 2.5rem;
   background:
     linear-gradient(110deg, rgba(7, 17, 26, 0.9) 12%, rgba(7, 17, 26, 0.38) 56%, rgba(7, 17, 26, 0.84) 100%),
-    url("https://images.pexels.com/photos/99551/pexels-photo-99551.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
+    url("sunrise-camp.jpeg") center/cover no-repeat;
 }
 
 .hero__video,
@@ -645,6 +645,12 @@ p {
   gap: 1rem;
 }
 
+.packages-grid {
+  max-width: 72rem;
+  margin: 0 auto;
+  justify-content: center;
+}
+
 .journey-card {
   padding: 1.4rem;
   border-radius: var(--radius-lg);
@@ -702,11 +708,30 @@ p {
 
 .package-card {
   position: relative;
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: 1rem;
   padding: 1.5rem;
   border-radius: var(--radius-xl);
   transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+}
+
+.package-card__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  min-height: 1.5rem;
+}
+
+.package-card__top .package-card__tag {
+  margin: 0;
+}
+
+.package-card h3 {
+  margin: 0;
+  text-wrap: balance;
 }
 
 .package-card:hover,
@@ -729,8 +754,9 @@ p {
 .package-card__badge {
   position: static;
   justify-self: start;
+  flex-shrink: 0;
   width: fit-content;
-  margin-bottom: 0.15rem;
+  margin-bottom: 0;
   padding: 0.42rem 0.72rem;
   border-radius: 999px;
   background: rgba(242, 206, 143, 0.18);
@@ -743,9 +769,14 @@ p {
 }
 
 .package-card__price {
+  min-height: 3.35rem;
   margin-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   font-size: 1.25rem;
   font-weight: 700;
+  line-height: 1.1;
   color: var(--muted-strong);
 }
 
@@ -760,11 +791,17 @@ p {
 .package-card__list {
   margin: 0;
   padding-left: 1.2rem;
+  flex: 1 1 auto;
   color: var(--muted);
 }
 
 .package-card__list li + li {
   margin-top: 0.48rem;
+}
+
+.package-card > .btn {
+  width: 100%;
+  margin-top: auto;
 }
 
 .compare-panel {
@@ -1037,6 +1074,26 @@ p {
   gap: 1.2rem;
 }
 
+.booking-form__intro {
+  display: grid;
+  gap: 0.45rem;
+  padding: 1rem 1.1rem;
+  border-radius: 1.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.booking-form__intro strong {
+  font-size: 1rem;
+  color: var(--muted-strong);
+}
+
+.booking-form__intro p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 .booking-form__grid,
 .booking-form__actions {
   display: grid;
@@ -1049,6 +1106,12 @@ p {
   gap: 0.55rem;
   color: var(--muted-strong);
   font-size: 0.92rem;
+}
+
+.booking-form__field-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
 }
 
 .booking-form input,
@@ -1118,6 +1181,10 @@ p {
   padding: 1.2rem;
   border-radius: 1.25rem;
   background: rgba(255, 255, 255, 0.04);
+}
+
+.booking-form__actions .btn {
+  width: 100%;
 }
 
 .booking-form__summary p,
@@ -1484,7 +1551,16 @@ body.modal-open .sticky-booking {
   }
 
   .packages-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(17rem, 22rem));
+    justify-content: center;
+  }
+
+  .package-card h3 {
+    min-height: 6.1rem;
+  }
+
+  .package-card__price {
+    min-height: 4.7rem;
   }
 
   .gallery-grid {
@@ -1532,7 +1608,8 @@ body.modal-open .sticky-booking {
   }
 
   .packages-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(17rem, 22rem));
+    justify-content: center;
   }
 
   .proof__grid {
