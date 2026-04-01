@@ -49,27 +49,22 @@ const packageData = {
   classic: {
     name: "Classic Flight",
     pricing: "perGuest",
-    price: 950,
+    price: 1800,
     label: "Classic Flight for {guests}",
   },
   couple: {
-    name: "Private Couple Flight",
-    pricing: "fixed",
-    price: 2690,
-    forcedGuests: 2,
-    label: "Private Couple Flight for 2 guests",
+    name: "Private Flight",
+    pricing: "perGuest",
+    price: 3500,
+    minimumGuests: 2,
+    label: "Private Flight for {guests}",
   },
   vip: {
-    name: "VIP / Royal Experience",
+    name: "Royal Flight",
     pricing: "perGuest",
-    price: 1450,
-    label: "VIP / Royal Experience for {guests}",
-  },
-  creator: {
-    name: "Influencer / Content Package",
-    pricing: "perGuest",
-    price: 1650,
-    label: "Influencer / Content Package for {guests}",
+    price: 5500,
+    minimumGuests: 2,
+    label: "Royal Flight for {guests}",
   },
 };
 
@@ -380,17 +375,22 @@ const setGuestLockState = () => {
   const selectedPackage = getSelectedPackage();
   const selected = packageData[selectedPackage];
   const guestInputs = document.querySelectorAll('[data-sync="guests"]');
+  const minimumGuests = selected.minimumGuests || 1;
   const coupleMode = Boolean(selected.forcedGuests);
 
   guestInputs.forEach((input) => {
     input.disabled = coupleMode;
     if (coupleMode) {
       input.value = String(selected.forcedGuests);
+    } else if (Number(input.value) < minimumGuests) {
+      input.value = String(minimumGuests);
     }
   });
 
   if (coupleMode) {
-    guestLockNote.textContent = "Private Couple Flight is reserved for exactly 2 guests, with pacing designed for a proposal or intimate celebration.";
+    guestLockNote.textContent = "This private flight is reserved for exactly 2 guests, with pacing designed for a proposal or intimate celebration.";
+  } else if (minimumGuests > 1) {
+    guestLockNote.textContent = `${selected.name} requires a minimum of ${minimumGuests} guests and includes private service from pickup to landing.`;
   } else {
     guestLockNote.textContent = "Need more than 6 guests? Our concierge can arrange a private fleet and branded morning setup.";
   }
@@ -487,7 +487,9 @@ function updateBookingSummary() {
   bookingNote.textContent = noteText;
   stickySummary.textContent = `${chosenPackage.name} | ${formatCurrency(baseTotal)}`;
   stickyMeta.textContent =
-    chosenPackage.pricing === "fixed" ? "Private flight for 2 guests" : `${formatGuestLabel(guests)} selected`;
+    chosenPackage.pricing === "fixed"
+      ? "Private flight for 2 guests"
+      : `${formatGuestLabel(guests)} selected`;
 
   updatePackageCardState();
   updateWeatherTips();
